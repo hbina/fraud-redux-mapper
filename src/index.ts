@@ -3,7 +3,6 @@ import { reduxMiddlewareFactory } from 'redux-middleware-factory'
 import { ActionMap } from './types'
 
 export const defaultMapper = <S, A>(table: ActionMap<S, A>[]) => {
-  console.log(`table==>\n${JSON.stringify(table)}`)
   return reduxMiddlewareFactory(
     (
       store: MiddlewareAPI<Dispatch<AnyAction>, S>,

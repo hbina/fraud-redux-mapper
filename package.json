@@ -1,7 +1,13 @@
 {
   "name": "fraud-redux-mapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Execute some lambda given certain action types.",
+  "keywords": [
+    "redux",
+    "thunk",
+    "redux-mapper",
+    "middleware"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [

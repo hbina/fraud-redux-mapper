@@ -2,11 +2,11 @@ import { AnyAction, Dispatch, MiddlewareAPI } from '@reduxjs/toolkit'
 import { reduxMiddlewareFactory } from 'redux-middleware-factory'
 import { ActionMap } from './types'
 
-export const defaultMapper = <S, A>(table: ActionMap<S, A>[]) => {
+export const createMapper = <S, A>(table: ActionMap<S, A>[]) => {
   return reduxMiddlewareFactory(
     (
       store: MiddlewareAPI<Dispatch<AnyAction>, S>,
-      next: Dispatch<AnyAction>,
+      _next: Dispatch<AnyAction>,
       action: AnyAction
     ) => {
       const actionMap = table.find((from) => from.from === action.type)
